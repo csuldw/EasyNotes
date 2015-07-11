@@ -1,2 +1,2 @@
 # leetcode.res
-LeetCode OJ代码
+LeetCode OJ code
