@@ -1,6 +1,6 @@
 # HDFS文件操作
 
-## 删除
+## 删除HDFS目录
 
 ```
 val hdfs = org.apache.hadoop.fs.FileSystem.get(new java.net.URI("hdfs://master:9000"), new org.apache.hadoop.conf.Configuration())
