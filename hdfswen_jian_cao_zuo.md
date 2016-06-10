@@ -19,8 +19,8 @@ import org.apache.hadoop.conf.Configuration
 def delete(hdfs_prefix : String, hdfs_path : String) : Boolean = {
   try {
     val conf = new Configuration()
-    val fs = org.apache.hadoop.fs.FileSystem.get(URI.create(hdfs_prefix), conf)
-    val java_path = new org.apache.hadoop.fs.Path(hdfs_path)
+    val fs = FileSystem.get(URI.create(hdfs_prefix), conf)
+    val java_path = new Path(hdfs_path)
     val ret = fs.delete(java_path, true)
     ret
   } catch {
