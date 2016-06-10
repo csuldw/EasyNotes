@@ -13,7 +13,6 @@ res.saveAsTextFile(output)
 ### 删除HDFS目录
 
 ```
-import org.apache.hadoop.fs.{FileSystem, Path}
 def delete(hdfs_prefix : String, hdfs_path : String) : Boolean = {
   try {
     val conf = new org.apache.hadoop.conf.Configuration()
