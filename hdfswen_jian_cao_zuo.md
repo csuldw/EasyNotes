@@ -6,7 +6,7 @@
 val outPath = cfg.getString("hdfs://master:9000/home20160610/right")
 output = new org.apache.hadoop.fs.Path(outPath)
 ......//RDD操作，返回一个rdd结果res
-res.saveAsTextFile()
+res.saveAsTextFile(output)
 ```
 
 
