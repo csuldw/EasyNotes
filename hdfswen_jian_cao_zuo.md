@@ -4,6 +4,7 @@
 
 ```
 val hdfs = org.apache.hadoop.fs.FileSystem.get(new java.net.URI("hdfs://master:9000"), new org.apache.hadoop.conf.Configuration())
+output = new org.apache.hadoop.fs.Path(outPath)
 hdfs.saveAsTextFile()
 ```
 
