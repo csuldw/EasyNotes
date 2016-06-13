@@ -14,6 +14,6 @@ val logPathPrefix = "/home/hdp-btime/project/web/stats"
 val logPathDir = logPathPrefix +  "/2016-06-12"
 val files = hdfsUtils.list(hdfsURLOutput,logPathDir)
 val res = sc.parallelize(files)
-
+val output = new org.apache.hadoop.fs.Path(hdfsURLInput + "/home/hdp-btime/btime_rec_user_log/hdfs/history")
 ```
 
