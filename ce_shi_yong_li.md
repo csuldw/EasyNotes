@@ -12,6 +12,6 @@ val hdfs = org.apache.hadoop.fs.FileSystem.get(new java.net.URI(hdfsURLOutput), 
 val hdfsUtils = new HDFSFuncs(cfg)
 val logPathPrefix = "/home/hdp-btime/project/web/stats"
 hdfsUtils.list(hdfsURLOutput,logPathPrefix)
-hdfsUtils.list(hdfsURLInput,logPathPrefix)
+val logPathDir = logPathPrefix +  "/2016-06-12"
 ```
 
