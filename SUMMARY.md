@@ -14,5 +14,5 @@
    * [RDD操作详解-Action和Transformation](chapter5_2-spark-operator-combineByKey.md)
    * [Spark测试用例](chapter5_3-spark-test.md)
 * [Scala](chapter4-scala.md)
-   * [chapter4_1-scala-note](chapter41_-scala-note.md)
+   * [Scala笔记](chapter41_-scala-note.md)
 
