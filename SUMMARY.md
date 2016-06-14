@@ -2,11 +2,11 @@
 
 * [前言](README.md)
 * [Python笔记](chapter2_1-python-notes.md)
-* [Hadoop常用命令](chapter3_1-hadoop-command.md)
 * [Linux](chapter1-linux.md)
    * [Linux-Shell命令](chapter1_1-linux-commands.md)
    * [Linux时间戳转换](chapter1_2-linux-ts-to-time.md)
 * [Hadoop](chapter3-hadoop.md)
+   * [Hadoop常用命令](chapter3_1-hadoop-command.md)
    * [HDFS文件操作](chapter3_2-hadoop-file-system.md)
 * [Spark](chapter5-spark.md)
    * [Spark算子](chapter5_1-spark-RDD-introduction.md)
