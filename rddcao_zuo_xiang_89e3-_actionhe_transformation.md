@@ -17,7 +17,7 @@ transformation操作得到的是一个全新的RDD，方式很多，比如从数
 
 **说明**：所有的transformation采用的都是懒（lazy）策略，即如果只提交transformation是不会执行计算的，计算只有在action被提交的时候才被触发。
 
-- map(func) :对调用map的RDD数据集中的每个element都使用func变换，返回一个新的分布式数据集，由每个原元素经过func函数转换后组成
+- map(func) :对调用map的RDD数据集中的每个element都使用func变换，并返回一个全新的分布式数据集，由每个原元素经过func函数转换后组成
 - filter(func) : 返回一个新的数据集，由经过func函数后返回值为true的原元素组成
 - flatMap(func) : 类似于map，但是每一个输入元素，会被映射为0到多个输出元素（因此，func函数的返回值是一个Seq，而不是单一元素）
 - sample(withReplacement, frac, seed) :根据给定的随机种子seed，随机抽样出数量为frac的数据
