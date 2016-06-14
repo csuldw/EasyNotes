@@ -6,7 +6,7 @@
 * [HDFS文件操作](chapter2-1-hadoop-command.md)
 * [Spark算子](chapter4_1-spark-operator.md)
 * [RDD操作详解-Action和Transformation](chapter4_2-spark-RDD.md)
-* [Hadoop常用命令](hadoop.md)
+* [chapter2_2-hadoop-filesystem.md](hadoop.md)
 * [Spark测试用例](ce_shi_yong_li.md)
 * [Python笔记](pythonbi_ji.md)
 
