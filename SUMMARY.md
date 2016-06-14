@@ -7,6 +7,6 @@
 * [HDFS文件操作](chapter2_2-hadoop-file-system.md)
 * [Spark算子](chapter4_1-spark-operator.md)
 * [RDD操作详解-Action和Transformation](chapter4_2-spark-RDD.md)
-* [Spark测试用例](ce_shi_yong_li.md)
+* [Spark测试用例](chapter3-spark-test.md)
 * [Python笔记](pythonbi_ji.md)
 
