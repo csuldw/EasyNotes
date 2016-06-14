@@ -8,5 +8,5 @@
 * [Python笔记](chapter3_1-python-notes.md)
 * [Spark算子](chapter4_1-spark-operator.md)
 * [RDD操作详解-Action和Transformation](chapter4_2-spark-RDD.md)
-* [Spark测试用例](chapter3-spark-test.md)
+* [Spark测试用例](chapter4-spark-test.md)
 
