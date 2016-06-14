@@ -5,9 +5,9 @@
 * [Python笔记](chapter2_1-python-notes.md)
 * [Hadoop常用命令](chapter3_1-hadoop-command.md)
 * [HDFS文件操作](chapter3_2-hadoop-file-system.md)
-* [Spark算子](chapter4_1-spark-RDD-introduction.md)
 * [RDD操作详解-Action和Transformation](chapter4_2-spark-operator-combineByKey.md)
 * [Linux-Shell命令](chapter1_1-linux-commands.md)
 * Spark
+   * [Spark算子](chapter4_1-spark-RDD-introduction.md)
    * [Spark测试用例](chapter4-spark-test.md)
 
