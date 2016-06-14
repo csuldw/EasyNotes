@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Linux时间戳转换](linuxshi_jian_chuo_zhuan_huan.md)
+* [Linux时间戳转换](linux.md)
 * [Linux-Shell命令](chapter1_1-linux-commands.md)
 * [HDFS文件操作](hdfswen_jian_cao_zuo.md)
 * [Spark算子](chapter1_1-spark-operator.md)
