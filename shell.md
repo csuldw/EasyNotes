@@ -6,7 +6,7 @@
 #!/bin/sh
 cat $1 | while read line
 do
-echo `date -d @$line "+%F %T"`
+  echo `date -d @$line "+%F %T"`
 done
 ```
 
