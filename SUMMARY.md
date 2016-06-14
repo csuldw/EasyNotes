@@ -6,4 +6,5 @@
 * [RDD操作详解-Action和Transformation](rddcao_zuo_xiang_89e3-_actionhe_transformation.md)
 * [Hadoop常用命令](hadoop.md)
 * [Spark测试用例](ce_shi_yong_li.md)
+* Python笔记
 
