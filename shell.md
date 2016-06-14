@@ -48,5 +48,5 @@ sh tsToTime.sh ts.data > time.data
 
 ---
 
-作者：刘帝伟
+作者：刘帝伟  
 日期：2016-06-14
