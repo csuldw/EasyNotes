@@ -2,9 +2,9 @@
 
 
 
-1. 输入：在Spark程序运行中，数据从外部数据空间（如分布式存储：textFile读取HDFS等，parallelize方法输入Scala集合或数据）输入Spark，数据进入Spark运行时数据空间，转化为Spark中的数据块，通过BlockManager进行管理。
-2. 运行：在Spark数据输入形成RDD后便可以通过变换算子，如filter等，对数据进行操作并将RDD转化为新的RDD，通过Action算子，触发Spark提交作业。 如果数据需要复用，可以通过Cache算子，将数据缓存到内存。
-3. 输出：程序运行结束数据会输出Spark运行时空间，存储到分布式存储中（如saveAsTextFile输出到HDFS），或Scala数据或集合中（collect输出到Scala集合，count返回Scala int型数据）。
+1. input：在Spark程序运行中，当数据从外部数据空间（如分布式存储：使用textFile读取HDFS文件；parallelize方法输入Scala集合或数据）输入Spark时，数据就进入Spark运行时数据空间，并转化为Spark的数据块，通过BlockManager进行管理；
+2. run：在Spark数据输入形成RDD之后便可进行算子变换，如filter，对数据进行操作并形成新的RDD，每当使用Action算子时，就会触发Spark提交作业，如果数据需要复用的话，可以通过Cache算子，将数据缓存到内存；
+3. output：程序运行结束数据会输出Spark运行时空间，存储到分布式存储中（如saveAsTextFile输出到HDFS），或Scala数据或集合中（collect输出到Scala集合，count返回Scala int型数据）。
 
 
 Spark的核心数据模型是RDD，但RDD是个抽象类，具体由各子类实现，如MappedRDD、ShuffledRDD等子类。Spark将常用的大数据操作都转化成为RDD的子类。
@@ -12,6 +12,8 @@ Spark的核心数据模型是RDD，但RDD是个抽象类，具体由各子类实
 ## Transformation和Actions操作概况
 
 ### Transformation
+
+transformation操作得到的是一个全新的RDD，方式很多，比如从数据源生成一个新的RDD，或者由一个RDD生成一个新的RDD。
 
 - map(func) :返回一个新的分布式数据集，由每个原元素经过func函数转换后组成
 - filter(func) : 返回一个新的数据集，由经过func函数后返回值为true的原元素组成
@@ -26,6 +28,8 @@ Spark的核心数据模型是RDD，但RDD是个抽象类，具体由各子类实
 
 
 ### Actions
+
+action操作得到的是一个值，或者说是一个结果（它会直接将RDD cache到内存中）。
 
 - reduce(func) : 通过函数func聚集数据集中的所有元素。Func函数接受2个参数，返回一个值。这个函数必须是关联性的，确保可以被正确的并发执行
 - collect() : 在Driver的程序中，以数组的形式，返回数据集的所有元素。这通常会在使用filter或者其它操作后，返回一个足够小的数据子集再使用，直接将整个RDD集Collect返回，很可能会让Driver程序OOM
