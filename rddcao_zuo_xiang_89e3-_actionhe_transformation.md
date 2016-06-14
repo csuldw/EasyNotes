@@ -11,6 +11,9 @@ Spark的核心数据模型是RDD，但RDD是个抽象类，具体由各子类实
 
 ## Transformation和Actions操作概况
 
+Transformation返回值还是一个RDD。它使用了链式调用的设计模式，对一个RDD进行计算后，变换成另外一个RDD，然后这个RDD又可以进行另外一次转换。这个过程是分布式的
+Action返回值不是一个RDD。它要么是一个Scala的普通集合，要么是一个值，要么是空，最终或返回到Driver程序，或把RDD写入到文件系统中
+
 ### Transformation
 
 transformation操作得到的是一个全新的RDD，方式很多，比如从数据源生成一个新的RDD，或者由一个RDD生成一个新的RDD。
@@ -37,7 +40,7 @@ transformation操作得到的是一个全新的RDD，方式很多，比如从数
 
 action操作得到的是一个值，或者说是一个结果（它会直接将RDD cache到内存中）。
 
-- reduce(func) : 通过函数func聚集dataset中的所有元素。Func函数接受2个参数，返回一个值。这个函数必须是关联性的，确保可以被正确的并发执行
+- reduce(func) : 通过函数func聚集dataset中的所有元素。Func函数接受2个参数，返回一个值。这个函数必须是关联性的，确保可以被正确的并发执行；
 - collect() : 在Driver的程序中，以数组的形式，返回数据集的所有元素。这通常会在使用filter或者其它操作后，返回一个足够小的数据子集再使用，直接将整个RDD集Collect返回，很可能会让Driver程序OOM
 - count() : 返回数据集的元素个数
 - take(n) : 返回一个数组，由数据集的前n个元素组成。注意，这个操作目前并非在多个节点上，并行执行，而是Driver程序所在机器，单机计算所有的元素(Gateway的内存压力会增大，需要谨慎使用）
