@@ -1,2 +1,0 @@
-# Linux-Shell命令
-
