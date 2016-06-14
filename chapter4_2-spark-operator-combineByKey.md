@@ -1,8 +1,5 @@
-# Spark
+## Spark算子 - combineByKey
 
-## Spark算子
-
-### combineByKey
 combineByKey属于Key-Value型算子，做的是聚集操作，这种变换不会触发作业的提交，主要有三个参数，分别是:
 
 - combiner function : 组合器函数，用于将RDD[K,V]中的V转换成一个新的值C1；
