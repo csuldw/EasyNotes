@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Linux时间戳转换](chapter1_2-linux-ts-to-time.md)
 * [Linux-Shell命令](chapter1_1-linux-commands.md)
-* [Hadoop常用命令](chapter2_1-hadoop-command.md)
+* [Hadoop常用命令](chapter3_1-hadoop-command.md)
 * [HDFS文件操作](chapter2_2-hadoop-file-system.md)
 * [Python笔记](chapter3_1-python-notes.md)
 * [Spark算子](chapter4_1-spark-operator.md)
