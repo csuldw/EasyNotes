@@ -1,3 +1,3 @@
 # 简记
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+简易笔记 EasyNotes：本文主要记录个人学习过程中踩过的坑。
