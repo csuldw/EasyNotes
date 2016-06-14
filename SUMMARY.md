@@ -9,6 +9,6 @@
 * [Spark算子](chapter4_1-spark-RDD-introduction.md)
 * [RDD操作详解-Action和Transformation](chapter4_2-spark-operator-combineByKey.md)
 * [Spark测试用例](chapter4-spark-test.md)
-* [chapter4_1-Scala-notes.md](chapter41_-scala-notesmd.md)
+* [Scala笔记](chapter41_-scala-notesmd.md)
    * Scala笔记
 
