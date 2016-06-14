@@ -1,2 +1,2 @@
-# leetcode.res
-LeetCode OJ code
+# Note
+personal notes.
