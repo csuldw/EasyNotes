@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [前言](README.md)
 * [Linux时间戳转换](chapter1_2-linux-ts-to-time.md)
 * [Linux-Shell命令](chapter1_1-linux-commands.md)
 * [Hadoop常用命令](chapter3_1-hadoop-command.md)
