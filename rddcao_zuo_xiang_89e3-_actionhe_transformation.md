@@ -13,7 +13,7 @@ Spark的核心数据模型是RDD，但RDD是个抽象类，具体由各子类实
 
 ### Transformation
 
-transformation操作得到的是一个全新的RDD，方式很多，比如从数据源生成一个新的RDD，或者由一个RDD生成一个新的RDD。
+transformation操作得到的是一个全新的RDD，方式很多，比如从数据源生成一个新的RDD，或者由一个RDD生成一个新的RDD。所有的transformation都是采用的懒策略，就是如果只是将transformation提交是不会执行计算的，计算只有在action被提交的时候才被触发。
 
 - map(func) :返回一个新的分布式数据集，由每个原元素经过func函数转换后组成
 - filter(func) : 返回一个新的数据集，由经过func函数后返回值为true的原元素组成
