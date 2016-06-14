@@ -8,7 +8,7 @@
 * [Spark算子](chapter4_1-spark-RDD-introduction.md)
 * [RDD操作详解-Action和Transformation](chapter4_2-spark-operator-combineByKey.md)
 * [Linux-Shell命令](chapter1_1-linux-commands.md)
-* chapter-1
+* Spark
    * [Spark测试用例](chapter4-spark-test.md)
    * [多福多寿](duo_fu_duo_shou.md)
 
