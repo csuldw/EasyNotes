@@ -17,15 +17,19 @@ transformation操作得到的是一个全新的RDD，方式很多，比如从数
 
 **说明**：所有的transformation采用的都是懒（lazy）策略，即如果只提交transformation是不会执行计算的，计算只有在action被提交的时候才被触发。
 
-- map(func) :对调用map的RDD数据集中的每个element都使用func变换，并返回一个全新的分布式数据集，由每个原元素经过func函数转换后组成
-- filter(func) : 返回一个新的数据集，由经过func函数后返回值为true的原元素组成
-- flatMap(func) : 类似于map，但是每一个输入元素，会被映射为0到多个输出元素（因此，func函数的返回值是一个Seq，而不是单一元素）
-- sample(withReplacement, frac, seed) :根据给定的随机种子seed，随机抽样出数量为frac的数据
-- union(otherDataset) : 返回一个新的数据集，由原数据集和参数联合而成
-- groupByKey([numTasks]) :在一个由（K,V）对组成的数据集上调用，返回一个（K，Seq[V])对的数据集。注意：默认情况下，使用8个并行任务进行分组，你可以传入numTask可选参数，根据数据量设置不同数目的Task
-- reduceByKey(func, [numTasks]) : 在一个（K，V)对的数据集上使用，返回一个（K，V）对的数据集，key相同的值，都被使用指定的reduce函数聚合到一起。和groupbykey类似，任务的个数是可以通过第二个可选参数来配置的。
-- join(otherDataset, [numTasks]) :在类型为（K,V)和（K,W)类型的数据集上调用，返回一个（K,(V,W))对，每个key中的所有元素都在一起的数据集
-- groupWith(otherDataset, [numTasks]) : 在类型为（K,V)和(K,W)类型的数据集上调用，返回一个数据集，组成元素为（K, Seq[V], Seq[W]) Tuples。这个操作在其它框架，称为CoGroup
+- map(func)：对调用map的RDD中的每个element都使用func变换，并返回一个全新的分布式dataset；
+- filter(func)：对原dataset使用func函数过滤，返回结果为true的dataset；
+- flatMap(func)：类似于map，但是每一个输入元素，会被映射为0到多个输出元素（因此，func函数的返回值是一个Seq，而不是单一元素）；
+- mapPartitions(func):和map很像，但map的对象是每个element，而mapPartitions是每个partition；  
+- mapPartitionsWithSplit(func):和mapPartitions很像，但是func作用在其中一个split上，func需要有index；  
+- sample(withReplacement, frac, seed)：抽样，根据给定的随机种子seed，随机抽样出数量为frac的数据；
+- union(otherDataset)：返回一个新的dataset，由原dataset和参数联合而成；
+- distinct([numTasks]):返回一个新的dataset，这个dataset含有的是原dataset中的distinct的element；  
+- groupByKey([numTasks]) :在一个由（K,V）对组成的dataset上使用，返回一个（K，Seq[V])对的dataset。注意：默认情况下，使用8个并行任务进行分组，你可以传入numTask可选参数，根据数据量设置不同数目的Task；
+- reduceByKey(func, [numTasks]) : 在一个（K，V)对的dataset上使用，返回一个（K，V）对的dataset，key相同的值，都被使用指定的reduce函数聚合到一起。和groupbykey类似，任务的个数是可以通过第二个可选参数来配置的；
+- sortByKey([ascending],[numTasks]):按照key来进行排序，是升序还是降序，ascending是boolean类型；
+- join(otherDataset, [numTasks]) :在类型为（K,V)和（K,W)类型的dataset上使用，返回一个（K,(V,W))对，每个key中的所有元素都在一起的数据集
+- groupWith(otherDataset, [numTasks]) : 在类型为（K,V)和(K,W)类型的dataset上使用，返回一个新的dataset，元素组成为（K, Seq[V], Seq[W]) 的Tuples。这个操作在其它框架，称为CoGroup；
 - cartesian(otherDataset) : 笛卡尔积。但在数据集T和U上调用时，返回一个(T，U）对的数据集，所有元素交互进行笛卡尔积。
 
 
@@ -33,7 +37,7 @@ transformation操作得到的是一个全新的RDD，方式很多，比如从数
 
 action操作得到的是一个值，或者说是一个结果（它会直接将RDD cache到内存中）。
 
-- reduce(func) : 通过函数func聚集数据集中的所有元素。Func函数接受2个参数，返回一个值。这个函数必须是关联性的，确保可以被正确的并发执行
+- reduce(func) : 通过函数func聚集dataset中的所有元素。Func函数接受2个参数，返回一个值。这个函数必须是关联性的，确保可以被正确的并发执行
 - collect() : 在Driver的程序中，以数组的形式，返回数据集的所有元素。这通常会在使用filter或者其它操作后，返回一个足够小的数据子集再使用，直接将整个RDD集Collect返回，很可能会让Driver程序OOM
 - count() : 返回数据集的元素个数
 - take(n) : 返回一个数组，由数据集的前n个元素组成。注意，这个操作目前并非在多个节点上，并行执行，而是Driver程序所在机器，单机计算所有的元素(Gateway的内存压力会增大，需要谨慎使用）
