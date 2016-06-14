@@ -1,8 +1,6 @@
-# Shell
+## Linux时间戳转时间
 
-Linux时间戳转时间
-
-编辑tsToTime.sh，输入以下内容：
+1、首先编辑tsToTime.sh，输入以下内容：
 
 ```
 #!/bin/sh
@@ -12,7 +10,7 @@ do
 done
 ```
 
-一个时间戳文件 ts.data, 取前10行`cat ts.data | head -n 10`
+2、保存一个时间戳文件 `ts.data`,精确到秒（10位数）， 查看前10行`cat ts.data | head -n 10`
 
 ```
 1465837693
@@ -27,14 +25,13 @@ done
 1465857432
 ```
 
-
-运行代码：
+3、运行代码，如下：
 
 ```
 sh tsToTime.sh ts.data > time.data
 ```
 
-结果time.data,查看前10行数据：`cat time.data | head -n 10`
+4、得到结果`time.data`,查看前10行数据：`cat time.data | head -n 10`
 
 ```
 2016-06-14 01:08:13
@@ -48,3 +45,5 @@ sh tsToTime.sh ts.data > time.data
 2016-06-14 05:10:14
 2016-06-14 06:37:12
 ```
+
+---
