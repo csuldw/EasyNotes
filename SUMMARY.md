@@ -5,7 +5,7 @@
    * [Linux-Shell命令](chapter1_1-linux-commands.md)
    * [Linux时间戳转换](chapter1_2-linux-ts-to-time.md)
    * [环境配置](chapter1_3-configuration.md)
-   * Shell大小比较
+   * [Shell大小比较](chapter1_3-shell-size-compare)
 * [Python](python.md)
    * [Python笔记](chapter2_1-python-notes.md)
    * [FAQ](chapter2-faq.md)
