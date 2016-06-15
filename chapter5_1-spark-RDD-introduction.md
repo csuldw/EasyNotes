@@ -1,7 +1,6 @@
 # Spark RDD操作-Action和Transformation
 
 
-
 1. input：在Spark程序运行中，当数据从外部数据空间（如分布式存储：使用textFile读取HDFS文件；parallelize方法输入Scala集合或数据）输入Spark时，数据就进入Spark运行时数据空间，并转化为Spark的数据块，通过BlockManager进行管理；
 2. run：在Spark数据输入形成RDD之后便可进行算子变换，如filter，对数据进行操作并形成新的RDD，每当使用Action算子时，就会触发Spark提交作业，如果数据需要复用的话，可以通过Cache算子，将数据缓存到内存；
 3. output：程序运行结束数据会输出Spark运行时空间，存储到分布式存储中（如saveAsTextFile输出到HDFS），或Scala数据或集合中（collect输出到Scala集合，count返回Scala int型数据）。
