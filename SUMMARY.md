@@ -5,6 +5,7 @@
    * [Linux-Shell命令](chapter1_1-linux-commands.md)
    * [Linux时间戳转换](chapter1_2-linux-ts-to-time.md)
    * chapter1-config
+       * 环境配置
 * [Python](python.md)
    * [Python笔记](chapter2_1-python-notes.md)
    * [FAQ](chapter2-faq.md)
