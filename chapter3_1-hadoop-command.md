@@ -37,6 +37,8 @@ hadoop fs -test -e [hadoop path] #判断hadoop中是否存在某个文件夹
 hadoop fs -dus $uploadFilePath #查看目录下所有文件的总大小
 ```
 
+### shell目录判断
+
 下面是写在shell中的判断hdfs中是否存在某个文件夹，如果不存在，则创建
 
 ```
