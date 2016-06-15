@@ -34,7 +34,7 @@ hadoop fs -mv [hadoop file1] [hadoop file2] #将hadoop中的file1命名为file2
 hadoop fs -getmerge [hadoop folder] [filename] #将hadoop指定目录下所有内容保存为一个文件，同时down至本地
 hadoop job –kill [job-id] #将正在运行的hadoop作业kill掉
 hadoop fs -test -e [hadoop path] #判断hadoop中是否存在某个文件夹
-hadoop fs -dus $uploadFilePath
+hadoop fs -dus $uploadFilePath #查看目录下所有文件的总大小
 ```
 
 下面是写在shell中的判断hdfs中是否存在某个文件夹，如果不存在，则创建
