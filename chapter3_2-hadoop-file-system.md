@@ -1,6 +1,6 @@
 ## HDFS文件操作
 
-### 存储数据至HDFS
+### 将Spark的数据结果存储到HDFS
 
 ```
 val outPath = cfg.getString("hdfs://master:9000/home20160610/right")
@@ -8,7 +8,6 @@ output = new org.apache.hadoop.fs.Path(outPath)
 ......//RDD操作，返回一个rdd结果res
 res.saveAsTextFile(output)
 ```
-
 
 ### 删除HDFS目录
 
