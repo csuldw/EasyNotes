@@ -6,7 +6,7 @@
    * [Linux时间戳转换](chapter1_2-linux-ts-to-time.md)
 * [Python](python.md)
    * [Python笔记](chapter2_1-python-notes.md)
-   * FAQ
+   * [FAQ](chapter2-faq.md)
 * [Hadoop](chapter3-hadoop.md)
    * [Hadoop常用命令](chapter3_1-hadoop-command.md)
    * [HDFS文件操作](chapter3_2-hadoop-file-system.md)
