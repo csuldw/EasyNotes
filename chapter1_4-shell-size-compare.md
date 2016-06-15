@@ -16,7 +16,7 @@
 #!/bin/sh
 count=`ps aux | grep -v grep | grep "sh test.sh" | wc -l`
 echo $count
-if [ $count -gt 2 ] ;
+if [ $count -ge 1 ] ;
 then
   echo "faild"
   exit
