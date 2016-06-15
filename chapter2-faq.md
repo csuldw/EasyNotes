@@ -11,8 +11,8 @@ Ans：同上，到Python安装目录中，执行`vim Modules/Setup`，找到ssl�
 
 ```
 _ssl _ssl.c \
-        -DUSE_SSL -I/home/hdp-btime/liudiwei/software/openssl/include -I/home/hdp-btime/liudiwei/software/openssl/include/openssl \
-        -L/home/hdp-btime/liudiwei/software/openssl/lib -lssl -lcrypto
+        -DUSE_SSL -I/home/liudiwei/software/openssl/include -I/home/liudiwei/software/openssl/include/openssl \
+        -L/home/liudiwei/software/openssl/lib -lssl -lcrypto
 
 ```
 然后执行make clean & make & make install即可。
