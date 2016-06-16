@@ -11,3 +11,11 @@ set shiftwidth=4
 set nu
 set cursorline
 ```
+
+### crontab 设置
+
+设置程序自动执行
+
+```
+3,18,33,48 * * * * source ~/.bashrc && cd /home/liudiwei/project/ && sh run.sh>> log/run.out 2>&1; cd -
+```
