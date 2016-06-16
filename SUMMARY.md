@@ -19,4 +19,5 @@
    * [Spark测试用例](chapter5_3-spark-test.md)
 * [Scala](chapter4-scala.md)
    * [Scala笔记](chapter41_-scala-note.md)
+   * Redis操作
 
