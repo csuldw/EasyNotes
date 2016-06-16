@@ -15,7 +15,7 @@ libraryDependencies += "redis.clients" % "jedis" % "2.6.2"
 import redis.clients.jedis.Jedis
 object RedisTest {
   def main(args: Array[String]) {
-    val redisHost = "10.121.93.46"
+    val redisHost = "localhost"
     val redisPort = 9529
     val redisPassword = "dsgtwh"
     val redisClient = new Jedis(redisHost, redisPort, 0)
