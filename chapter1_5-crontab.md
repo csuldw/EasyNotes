@@ -44,16 +44,13 @@ cron可以让系统在指定的时间，去执行某个指定的工作，我们�
     /etc/cron.deny
 
 
-系统首先判断是否有cron.allow这个文件，如果有这个文件的话，系统会判断这个使用者有没有在cron.allow的名单里面，如果在名单里面的话，就可以使用cron机制。如果这个使用者没有在cron.allow名单里面的话，就不能使用cron机制。
+- 系统首先判断是否有`cron.allow`这个文件，如果有这个文件的话，系统会判断这个使用者有没有在`cron.allow`的名单里面，如果在名单里面的话，就可以使用cron机制。如果这个使用者没有在`cron.allow`名单里面的话，就不能使用`cron`机制。
+- 如果系统里面没有`cron.allow`这个文件的话，系统会再判断是否有`cron.deny`这个文件，如果有`cron.deny`这个文件的话，就会判断这个使用者有没有在`cron.deny`这个名单里面，如果这个使用者在`cron.deny`名单里面的话，将不能使用cron机制。如果这个使用者没有在`cron.deny`这个名单里面的话就可以使用`cron`机制。
+- 如果系统里这两个文件都没有的话，就可以使用`cron`机制
 
-如果系统里面没有cron.allow这个文件的话，系统会再判断是否有cron.deny这个文件，如果有cron.deny这个文件的话，就会判断这个使用者有没有在cron.deny这个名单里面，如果这个使用者在cron.deny名单里面的话，将不能使用cron机制。如果这个使用者没有在cron.deny这个名单里面的话就可以使用cron机制。
+## 介绍crontab文件
 
-如果系统里这两个文件都没有的话，就可以使用cron机制
-
-介绍crontab文件
-
-        /etc/crontab
-        在这个文件里并没有记录系统要执行哪些工作，而是记录了下面四个子目录。
+        /etc/crontab    #在这个文件里并没有记录系统要执行哪些工作，而是记录了下面四个子目录
         /etc/cron.hourly
         /etc/cron.daily
         /etc/cron.weekly
