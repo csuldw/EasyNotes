@@ -17,7 +17,7 @@ object RedisTest {
   def main(args: Array[String]) {
     val redisHost = "localhost"
     val redisPort = 9529
-    val redisPassword = "dsgtwh"
+    val redisPassword = "liudiwei"
     val redisClient = new Jedis(redisHost, redisPort, 0)
     redisClient.auth(redisPassword)
     val value = redisClient.get("1_218711")
