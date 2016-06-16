@@ -22,9 +22,6 @@ object RedisTest {
     redisClient.auth(redisPassword)
     val value = redisClient.get("1_218711")
     println(value)
-    //val redisHost = config.getString("redisHost")
-    //val redisPort = config.getInt("redisPort")
-    //val redisPassword = config.getString("redisPassword")
     redisClient.close()
   }
 ```
