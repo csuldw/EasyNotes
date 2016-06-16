@@ -9,7 +9,7 @@
    * [Crontab详解](chapter1_5-crontab.md)
 * [Python](python.md)
    * [Python笔记](chapter2_1-python-notes.md)
-   * 环境搭建
+   * [环境搭建](chapter2_2-environment.md)
 * [Hadoop](chapter3-hadoop.md)
    * [Hadoop常用命令](chapter3_1-hadoop-command.md)
    * [HDFS文件操作](chapter3_2-hadoop-file-system.md)
