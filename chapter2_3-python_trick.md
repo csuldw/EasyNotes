@@ -7,10 +7,6 @@
 ### shape函数
 python中的shape有两个，一个是numpy中的shape，一个是array的shape，本质上是一样的。
 
-<!-- more -->
-
-
-
 ```
 import numpy as np
 y=[1,2,3,1,2,2,1,2,1,2]  # list
