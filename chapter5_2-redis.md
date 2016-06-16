@@ -10,7 +10,6 @@ libraryDependencies += "redis.clients" % "jedis" % "2.6.2"
 
 需要引入redis.clients.jedis.Jedis库。
 
-
 ```
 import redis.clients.jedis.Jedis
 object RedisTest {
