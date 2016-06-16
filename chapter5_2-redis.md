@@ -8,9 +8,11 @@ libraryDependencies += "redis.clients" % "jedis" % "2.6.2"
 
 ## 测试
 
+需要引入redis.clients.jedis.Jedis库。
+
+
 ```
 import redis.clients.jedis.Jedis
-
 object RedisTest {
   def main(args: Array[String]) {
     val redisHost = "10.121.93.46"
