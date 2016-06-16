@@ -10,6 +10,7 @@
 * [Python](python.md)
    * [Python笔记](chapter2_1-python-notes.md)
    * [FAQ](chapter2-faq.md)
+   * 环境搭建
 * [Hadoop](chapter3-hadoop.md)
    * [Hadoop常用命令](chapter3_1-hadoop-command.md)
    * [HDFS文件操作](chapter3_2-hadoop-file-system.md)
