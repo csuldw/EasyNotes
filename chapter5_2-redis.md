@@ -11,7 +11,7 @@ libraryDependencies += "redis.clients" % "jedis" % "2.6.2"
 ```
 import redis.clients.jedis.Jedis
 
-object basicDataGenerator {
+object RedisTest {
   def main(args: Array[String]) {
     val redisHost = "10.121.93.46"
     val redisPort = 9529
