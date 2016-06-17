@@ -75,6 +75,6 @@ vim ~/.bashrc
 
 在文件末尾追加下列内容:
 
-	alias mypython='/home/liudiwei/software/python27/bin/python'
+> alias mypython='/home/liudiwei/software/python27/bin/python'
 
 然后使用`source ~/.bashrc`让该配置生效。接着就可以使用`mypython`进入python控制台了。
