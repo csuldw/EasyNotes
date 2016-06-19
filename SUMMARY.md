@@ -10,7 +10,7 @@
 * [Python](python.md)
    * [Python笔记](chapter2_1-python-notes.md)
    * [环境搭建](chapter2_2-environment.md)
-   * [Python小技巧](chapter2_3-python_trick.md)
+   * [常用函数](chapter2_3-python_trick.md)
    * [参数传递](chapter2_3-paramter-passing.md)
    * [FAQ](chapter2_n-faq.md)
 * [Hadoop](chapter3-hadoop.md)
