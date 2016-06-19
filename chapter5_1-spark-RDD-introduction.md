@@ -1,4 +1,4 @@
-# Spark RDD操作-Action与Transformation
+# Spark 算子-Action与Transformation
 
 
 1. input：在Spark程序运行中，当数据从外部数据空间（如分布式存储：使用textFile读取HDFS文件；parallelize方法输入Scala集合或数据）输入Spark时，数据就进入Spark运行时数据空间，并转化为Spark的数据块，通过BlockManager进行管理；
