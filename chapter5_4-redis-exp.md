@@ -40,7 +40,7 @@ val redisPort = 8080
 val redisClient = new Jedis(redisHost, redisPort)
 redisClient.auth(redisPassword)
 ```
-### 使用pipeline读取数据
+### 方法一、使用pipeline读取数据
 
 ```Scala
 var tempRedisRes = Map[String, Response[String]]()
@@ -52,7 +52,7 @@ for(key <- keys){
 pp.sync()
 ```
 
-### 增加连接Redis次数
+### 方法二、增加连接Redis次数
 
 为了防止连接Redis失败，需要增加尝试次数，在上面的代码外面增加一层逻辑，如下：
 
