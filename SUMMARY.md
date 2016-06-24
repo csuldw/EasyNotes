@@ -20,7 +20,7 @@
    * [Spark算子](chapter5_1-spark-RDD-introduction.md)
    * [RDD操作详解-Action和Transformation](chapter5_2-spark-operator-combineByKey.md)
    * [测试用例](chapter5_3-spark-test.md)
-   * [Redis读取](chapter5_4-redis-exp.md)
+   * [Spark读取Redis数据](chapter5_4-redis-exp.md)
 * [Scala](chapter4-scala.md)
    * [Scala笔记](chapter41_-scala-note.md)
    * [Redis操作](chapter5_2-redis.md)
