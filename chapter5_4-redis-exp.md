@@ -9,6 +9,7 @@ import redis.clients.jedis.Jedis
 ```
 
 ### 连接Redis
+主要设置redisHost、redisPort，如果有密码，需要进行密码验证。
 
 ```
 val redisHost = "localhost"
