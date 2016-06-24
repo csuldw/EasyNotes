@@ -54,7 +54,7 @@ pp.sync()
 
 ### 增加连接Redis次数
 
-为了防止连接Redis失败，需要增加尝试次数。在上面的代码外面增加一层逻辑，如下：
+为了防止连接Redis失败，需要增加尝试次数，在上面的代码外面增加一层逻辑，如下：
 
 ```
 var tempRedisRes = Map[String, Response[String]]()
