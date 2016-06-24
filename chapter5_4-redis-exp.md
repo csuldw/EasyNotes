@@ -1,8 +1,9 @@
 # Redis读取
 
-## 逐行读取Redis数据
+## 方法一、逐行读取Redis数据
 
-### 导入redis库
+### 导入Redis库
+首先导入redis库，这里使用redis.clients.jedis.Jedis库。
 ```
 import redis.clients.jedis.Jedis
 ```
@@ -16,13 +17,13 @@ val redisClient = new Jedis(redisHost, redisPort)
 redisClient.auth(redisPassword)
 ```
 
-### 读取redis数据
+### 读取Redis数据
 ```
 redisClient.get("key01")
 ```
 
 
-## 使用redis Pipeline批量读取redis数据
+## 方法二、使用Redis pipeline批量读取Redis数据
 
 
 ### 导入相关库
@@ -40,7 +41,7 @@ val redisPort = 8080
 val redisClient = new Jedis(redisHost, redisPort)
 redisClient.auth(redisPassword)
 ```
-### 方法一、使用pipeline读取数据
+### 使用pipeline读取数据
 
 ```Scala
 var tempRedisRes = Map[String, Response[String]]()
@@ -52,7 +53,7 @@ for(key <- keys){
 pp.sync()
 ```
 
-### 方法二、增加连接Redis次数
+### 增加连接Redis次数
 
 为了防止连接Redis失败，需要增加尝试次数，在上面的代码外面增加一层逻辑，如下：
 
