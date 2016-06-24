@@ -22,3 +22,5 @@ val cmbRedisRes = basicData.mapPartitions{
   }
 }
 ```
+
+如果直接使用`println("part count length: " + partArr.length)`，在使用`partItr.map`操作，则返回的结果为空。
