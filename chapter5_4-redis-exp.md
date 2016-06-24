@@ -57,6 +57,8 @@ pp.sync()
 为了防止连接redis失败，需要增加尝试次数。在上面的代码外面增加一层逻辑，如下：
 
 ```
+var tempRedisRes = Map[String, Response[String]]()
+val keys = Array("key1", "key2", "key3", "key4")
 var tryTimes = 2
 var flag = false
 while(tryTimes > 0 && !flag) {
