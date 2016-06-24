@@ -88,4 +88,6 @@ while(tryTimes > 0 && !flag) {
 }
 ```
 
+说明：`pp.get()`得到的是一个`Response[String]`的结果。
+
 
