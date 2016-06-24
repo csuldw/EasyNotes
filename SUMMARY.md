@@ -17,7 +17,7 @@
    * [Hadoop常用命令](chapter3_1-hadoop-command.md)
    * [HDFS文件操作](chapter3_2-hadoop-file-system.md)
 * [Spark](chapter5-spark.md)
-   * [Spark算子](chapter5_1-spark-RDD-introduction.md)
+   * [RDD操作详解-Action和Transformation](chapter5_1-spark-RDD-introduction.md)
    * [RDD操作详解-Action和Transformation](chapter5_2-spark-operator-combineByKey.md)
    * [Spark读取Redis数据](chapter5_3-redis-exp.md)
    * [测试用例](chapter5_n-spark-test.md)
