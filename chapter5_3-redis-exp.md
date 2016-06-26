@@ -128,4 +128,4 @@ while(tryTimes > 0 && !flag) {
 
 再次说明：`pp.get()`得到的是一个`Response[String]`的结果，详细内容请查看[redis-clients-jedis-Pipeline](http://tool.oschina.net/uploads/apidocs/jedis-2.1.0/redis/clients/jedis/Pipeline.html).
 
-Ok，本文内容到此结束，更多精彩文章，请进 [http:www.csuldw.com](http:www.csuldw.com).
+Ok，本文内容到此结束，更多精彩文章，请进 [http://www.csuldw.com](http://www.csuldw.com).
