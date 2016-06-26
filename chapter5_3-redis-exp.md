@@ -1,4 +1,4 @@
-# Spark读取Redis数据
+# Spark批量读取Redis数据-Pipeline
 
 最近在处理数据时，需要将原始数据与Redis的数据进行join，在读取Redis的过程中，碰到了一些问题，顺便做个笔记，希望对其他同学也有所帮助。实验过程中，当数据量还是十万级别的时候，逐个读取Redis并无压力；但当数据量达到千万级别时，问题就油然而生了，即使是使用Spark的mapPartitions也无法解决。因此，就考虑使用Redis的pipeline了（如果你有更好的方法，还请不吝赐教）。PS：本文主要针对的是Scala语言，因为目前在网上还没有看到Scala版本的Redis pipeline，希望此文能给初学者提供一个参考。
 
