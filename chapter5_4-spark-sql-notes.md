@@ -63,15 +63,56 @@ import sqlContext.implicits._
 
 ```
 inputFile="hdfs://master:9000/home/liudiwei/log.data"
-val basisDataDF = spSQL.jsonFile(inputFile)    // Create the DataFrame
+val df = spSQL.jsonFile(inputFile)    // Create the DataFrame
 ```
 
 注意：`inputFile`是HDFS路径，文件内容以JSON格式存储。
 
 
 
+## DataFrame基本操作
 
+下面引用api里面的实例
 
+```
+df.show()
+// age  name
+// null Michael
+// 30   Andy
+// 19   Justin
+
+// Print the schema in a tree format
+df.printSchema()
+// root
+// |-- age: long (nullable = true)
+// |-- name: string (nullable = true)
+
+// Select only the "name" column
+df.select("name").show()
+// name
+// Michael
+// Andy
+// Justin
+
+// Select everybody, but increment the age by 1
+df.select(df("name"), df("age") + 1).show()
+// name    (age + 1)
+// Michael null
+// Andy    31
+// Justin  20
+
+// Select people older than 21
+df.filter(df("age") > 21).show()
+// age name
+// 30  Andy
+
+// Count people by age
+df.groupBy("age").count().show()
+// age  count
+// null 1
+// 19   1
+// 30   1
+```
 
 
 
