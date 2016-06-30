@@ -1,4 +1,4 @@
-# 环境搭建
+# 环境搭建 - python及相关库的安装
 
 以前在使用python的时候，都是使用root用户安装好的全局python，现在，因为root用户安装的Python版本太低，同时自己没有root权限去对全局Python升级，所以要在非root用户下安装自己指定的Python。因此，就重新整理了一份如何在Linux环境下使用非root用户安装python及其相关的库，以备不时之需。
 
