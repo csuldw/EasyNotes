@@ -37,4 +37,14 @@ set cursorline
     - sklearn
     - matplotlib，需要依赖libpng
 
+```
 ./pip install --install-option="--prefix=$home/software/python/python27" simplejson
+```
+
+
+
+
+> 尝试使用screen在linux平台开发项目.
+
+
+
