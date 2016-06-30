@@ -114,7 +114,7 @@ df.groupBy("age").count().show()
 // 30   1
 ```
 
-
+其中，select、groupBy +　count 是平时用到比较多的，尤其是groupBy结合count来统计数据，比较方便。show主要用于spark-shell里进行调试输出。
 
 
 
