@@ -30,10 +30,18 @@ Spark的DataFrame可以简单的理解为一个分布式的二维表，这样也
 DataFrame的数据特点是其包含了每个Record的Metadata信息，让你可以在优化时基于列内部进行优化(例如一共30列，你只需要其中10列，你就可以只获取其中10列的信息)。RDD的数据特点有点是框架只知道每个Record是个person,但是无法洞悉内部是什么，这样也就导致了框架无法洞悉Record内部的细节，也就在优化的时候闲置了SparkSQL的性能提升。
 
 
+## 入门指南
 
 
 
 
+```
+val sc: SparkContext // An existing SparkContext.
+val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+
+// this is used to implicitly convert an RDD to a DataFrame.
+import sqlContext.implicits._
+```
 
 
 
