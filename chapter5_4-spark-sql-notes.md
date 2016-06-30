@@ -33,8 +33,6 @@ DataFrame的数据特点是其包含了每个Record的Metadata信息，让你可
 ## 入门指南
 
 
-
-
 ```
 val sc: SparkContext // An existing SparkContext.
 val sqlContext = new org.apache.spark.sql.SQLContext(sc)
