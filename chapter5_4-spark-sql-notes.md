@@ -63,10 +63,13 @@ import sqlContext.implicits._
 
 ```
 inputFile="hdfs://master:9000/home/liudiwei/log.data"
-val basisDataDF = spSQL.jsonFile(inputFile)
+val basisDataDF = spSQL.jsonFile(inputFile)    // Create the DataFrame
 ```
 
 注意：`inputFile`是HDFS路径，文件内容以JSON格式存储。
+
+
+
 
 
 
