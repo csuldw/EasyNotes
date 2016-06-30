@@ -33,6 +33,23 @@ DataFrame的数据特点是其包含了每个Record的Metadata信息，让你可
 ## 入门指南
 
 
+### 一、引入需要的库
+
+```
+import org.apache.spark.SparkContext
+
+import org.apache.spark.SparkConf
+import org.apache.spark.SparkContext._
+import org.apache.spark.rdd.RDD
+import org.apache.commons.configuration.{ PropertiesConfiguration => HierConf }
+import org.apache.spark.sql.types._
+
+import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
+```
+
+### 二、初始化SparkSQL
+
 ```
 val sc: SparkContext // An existing SparkContext.
 val sqlContext = new org.apache.spark.sql.SQLContext(sc)
@@ -41,8 +58,15 @@ val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 import sqlContext.implicits._
 ```
 
+### 三、读取HDFS文件
 
 
+```
+inputFile="hdfs://master:9000/home/liudiwei/log.data"
+val basisDataDF = spSQL.jsonFile(inputFile)
+```
+
+注意：inputFile是HDFS路径，文件内容以JSON格式存储。
 
 
 
