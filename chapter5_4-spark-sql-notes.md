@@ -66,7 +66,7 @@ inputFile="hdfs://master:9000/home/liudiwei/log.data"
 val basisDataDF = spSQL.jsonFile(inputFile)
 ```
 
-注意：inputFile是HDFS路径，文件内容以JSON格式存储。
+注意：`inputFile`是HDFS路径，文件内容以JSON格式存储。
 
 
 
