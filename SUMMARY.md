@@ -21,6 +21,7 @@
    * [Spark算子 - combineByKey](chapter5_2-spark-operator-combineByKey.md)
    * [Spark读取Redis数据](chapter5_3-redis-exp.md)
    * [FAQ](chapter5_n-spark-test.md)
+   * SparkSQL核心笔记
 * [Scala](chapter4-scala.md)
    * [Scala笔记](chapter41_-scala-note.md)
    * [Redis操作](chapter5_2-redis.md)
