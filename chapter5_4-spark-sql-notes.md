@@ -52,10 +52,10 @@ import org.apache.spark.sql.functions._
 
 ```
 val sc: SparkContext // An existing SparkContext.
-val sqlContext = new org.apache.spark.sql.SQLContext(sc)
+val spSQL = new org.apache.spark.sql.SQLContext(sc)
 
 // this is used to implicitly convert an RDD to a DataFrame.
-import sqlContext.implicits._
+import spSQL.implicits._
 ```
 
 ### 三、读取HDFS文件
@@ -118,7 +118,7 @@ df.groupBy("age").count().show()
 
 
 
-
+## 使用
 
 
 
