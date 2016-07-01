@@ -127,6 +127,7 @@ df.groupBy("age").count().show()
 
 ```
 //get user MD5 list
+df.registerTempTable("basisData")
 def getUser(spSQL: SQLContext) : RDD[String] = {
   spSQL.sql(s"""SELECT DISTINCT uid from basisData""").map{ case Row(uid) => uid.toString }
 }
@@ -135,7 +136,7 @@ def getUser(spSQL: SQLContext) : RDD[String] = {
 方法二、内嵌函数select
 
 ```
-basisDataDF.select("uid").map(x => x.toString)
+df.select("uid").map(x => x.toString)
 ```
 
 
