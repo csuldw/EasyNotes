@@ -1,7 +1,7 @@
 # Spark算子-flatMap
 
 
-spark 1.6.1 api 给出的是如下说明：
+[spark 1.6.1 api](http://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.rdd.RDD) 给出的是如下说明：
 
 ```
 def flatMap[U](f: (T) ⇒ TraversableOnce[U])(implicit arg0: ClassTag[U]): RDD[U]
