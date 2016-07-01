@@ -227,6 +227,13 @@ def getCmbActionList(spSQL: SQLContext, dataDF : DataFrame, regName : String, se
 }
 ```
 
+调用该函数之后，便可得到需要的结果
+
+```
+val actionRes = getCmbActionList(spSQL, userDataDF, "userDataDFs", "uid,obj")
+```
+
+
 
 
 
