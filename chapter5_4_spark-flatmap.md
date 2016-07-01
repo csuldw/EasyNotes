@@ -19,7 +19,7 @@ Process 2：将所有对象合并为一个对象；
 
 使用`flatMap`将`RDD[Array[String]]`转换成`RDD[String]`的结果。
 
-在spark-shell [spark-shell --driver-memory 10G --executor-memory 10G --executor-cores 5 --num-executors 3 ]执行下列代码
+在spark-shell [`spark-shell --driver-memory 10G --executor-memory 10G --executor-cores 5 --num-executors 3` ]执行下列代码
 
 ```
 val initRDD ：RDD[Array[String]] = sc.makeRDD(Array(Array("1","2"), Array("3","4")), 3)
