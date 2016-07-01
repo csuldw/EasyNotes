@@ -142,6 +142,30 @@ df.select("uid").map(x => x.toString)
 
 ## 实例
 
+加入原始数据是下面这种，uid表示用户，obj表示某个对象，action表示对这个对象的操作(只有click和view两类)。
+
+```
+uid obj action
+u1  s1  view
+u1  s1  view
+u1  s1  click
+u2  s1  view
+u1  s2  view
+u2  s2  view
+u2  s2  click 
+```
+
+
+现在我的目的是统计每个用户对各个对象的click和view的总数各是多少，需要得到结果如下：
+
+```
+uid obj click view
+u1  s1   1      2
+u1  s2   0      1
+u2  s1   0      1
+u2  s2   1      1
+```
+
 
 
 
