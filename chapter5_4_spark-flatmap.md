@@ -17,7 +17,7 @@ Process 2：将所有对象合并为一个对象；
 
 ## 实例-数据扁平化
 
-使用`flatMap`将`RDD[Array[String]]`转换成`RDD[String]`的结果。
+使用`flatMap`将`org.apache.spark.rdd.RDD[Array[String]]`转换成`org.apache.spark.rdd.RDD[String]`的结果。
 
 在linux中执行 `spark-shell --driver-memory 10G --executor-memory 10G --executor-cores 5 --num-executors 3`启动spark-shell编程，接着输入下列代码：
 
