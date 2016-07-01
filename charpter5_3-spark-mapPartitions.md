@@ -1,5 +1,7 @@
 # Spark算子-mapPartitions
 
+
+
 ## Iterator误解
 
 spark的mapPartitions算子，返回的是一个Iterator，如果mapPartitions中使用了map或是length，则会将Iterator全部消费完毕，致使Iterator的游标指向末尾，从而导致接下来的操作取不到数据。可行的方法就是，先将Iterator转换成Array保存起来，后面如果需要对part操作，只需要将Array再转换成Iterator就可以了。
