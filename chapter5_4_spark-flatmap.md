@@ -33,4 +33,4 @@ rdd2.collect
 output: Array[String] = Array(1, 2, 3, 4)
 ```
 
-提示：如果是`RDD[Set[String]]`也可以使用上述方法进行扁平化输出
+提示：如果是`RDD[Set[String]]`也可以使用上述方法进行扁平化输出。
