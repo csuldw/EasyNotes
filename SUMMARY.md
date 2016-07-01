@@ -17,6 +17,7 @@
    * [Hadoop常用命令](chapter3_1-hadoop-command.md)
    * [HDFS文件操作](chapter3_2-hadoop-file-system.md)
 * [Spark](chapter5-spark.md)
+   * Spark算子-mapPartitions
    * [RDD操作详解-Action和Transformation](chapter5_1-spark-RDD-introduction.md)
    * [Spark算子 - combineByKey](chapter5_2-spark-operator-combineByKey.md)
        * Spark算子-mapPartitions
