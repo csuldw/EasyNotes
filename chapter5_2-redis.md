@@ -1,6 +1,6 @@
 # Redis操作
 
-## sbt中添加redis
+## sbt中添加 Redis
 
 ```
 libraryDependencies += "redis.clients" % "jedis" % "2.6.2"
