@@ -10,7 +10,7 @@ Return a new RDD by first applying a function to all elements of this RDD, and t
 
 ## 理解
 
-flatMap执行的是两个操作----“**先映射后扁平化**”：
+flatMap执行的是两个操作----“**先映射然后扁平化**”：
 
 Process 1：对每条element进行指定操作，然后为每条输入返回一个对象；
 Process 2：将所有对象合并为一个对象；
