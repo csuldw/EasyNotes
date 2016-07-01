@@ -5,7 +5,7 @@
    * [Shell命令](chapter1_1-linux-commands.md)
    * [时间戳转换](chapter1_2-linux-ts-to-time.md)
    * [环境配置](chapter1_3-configuration.md)
-   * [比较大小](chapter1_4-shell-size-compare.md)
+   * [判断程序是否存在](chapter1_4-shell-size-compare.md)
    * [Crontab详解](chapter1_5-crontab.md)
 * [Python](python.md)
    * [字符串](chapter2_1-python-notes.md)
