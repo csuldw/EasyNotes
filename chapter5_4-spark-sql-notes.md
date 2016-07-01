@@ -120,11 +120,23 @@ df.groupBy("age").count().show()
 
 ## 使用SQL语言操作数据
 
+假设表中有一个字段是uid，表示的是用户的MD5标识，现在需要通过spark sql代码将用户取出来，并去重。代码如下：
 
 
+方法一：spark SQL代码
 
+```
+//get user MD5 list
+def getUser(spSQL: SQLContext) : RDD[String] = {
+  spSQL.sql(s"""SELECT DISTINCT uid from basisData""").map{ case Row(uid) => uid.toString }
+}
+```
 
+方法二、内嵌函数select
 
+```
+basisDataDF.select("uid").map(x => x.toString)
+```
 
 
 
