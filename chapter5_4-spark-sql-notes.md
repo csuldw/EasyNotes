@@ -207,6 +207,30 @@ u2  s2  view    1
 ```
 
 
+下面编写一个通用函数
+
+```
+/* 功能:获取用户行为数据
+ * dagaDF: 基础数据过滤后的数据
+ * regName：设置sparkSQL的registerTempTable名字 
+ * selectedCols：选中表中的列，多个以逗号分隔，结尾无逗号
+ * 返回：包含uid, typeCol, click, view的DataFrame数据
+ */
+def getCmbActionList(spSQL: SQLContext, dataDF : DataFrame, regName : String, selectedCols : String) : DataFrame = {
+  dataDF.registerTempTable(regName)
+  val sps = spSQL.sql(s"""SELECT $selectedCols, 
+    sum(CASE WHEN action="click" THEN count ELSE 0 END) click, 
+    sum(CASE WHEN action="view" THEN count ELSE 0 END) view 
+    FROM $regName
+    GROUP BY $selectedCols""")
+  sps
+}
+```
+
+
+
+
+
 
 
 
