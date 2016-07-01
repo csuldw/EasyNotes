@@ -24,10 +24,11 @@ Process 2：将所有对象合并为一个对象；
 ```
 val initRDD : org.apache.spark.rdd.RDD[Array[String]] = sc.makeRDD(Array(Array("1","2"), Array("3","4")), 3)
 val rdd2 : org.apache.spark.rdd.RDD[String] = initRDD.flatMap(x => x.toList)
-rdd2.collect
 ```
 
 **输出结果**
+
+直接执行`rdd2.collect`查看结果：
 
 ```
 output: Array[String] = Array(1, 2, 3, 4)
