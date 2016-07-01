@@ -1,6 +1,8 @@
 # Spark算子-flatMap
 
 
+
+
 ## 实例一、数据扁平化
 
 使用`flatMap`将`RDD[Array[String]]`转换成`RDD[String]`的结果。
