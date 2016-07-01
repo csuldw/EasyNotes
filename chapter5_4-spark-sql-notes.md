@@ -168,6 +168,11 @@ u2  s2   1      1
 
 下面使用sparkSQL来解决问题。
 
+加入我现在的数据以json格式存储在data.file中，现在先加载数据：
+
+```
+val spSQL = new org.apache.spark.sql.SQLContext(sc)
+```
 
 
 
