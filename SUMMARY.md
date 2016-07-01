@@ -2,7 +2,7 @@
 
 * [前言](README.md)
 * [Linux](chapter1-linux.md)
-   * [Shell命令](chapter1_1-linux-commands.md)
+   * [常用命令](chapter1_1-linux-commands.md)
    * [时间戳转换](chapter1_2-linux-ts-to-time.md)
    * [环境配置](chapter1_3-configuration.md)
    * [判断程序是否存在](chapter1_4-shell-size-compare.md)
