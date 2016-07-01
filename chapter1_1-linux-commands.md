@@ -69,3 +69,14 @@ return_str="`hadoop fs -dus $uploadFilePath`"
 hdpsize=`echo $return_str | cut -d \  -f 2`
 ```
 
+# shell 数值大小比较
+
+
+```
+-eq             //等于
+-ne             //不等于
+-gt             //大于
+-lt             //小于
+-ge            //大于等于
+-le            //小于等于
+```
