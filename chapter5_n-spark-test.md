@@ -12,4 +12,6 @@ conf = (SparkConf()
     .set("spark.driver.maxResultSize", "2g"))
 ```
 
+> hdfs://namenodefd1v.qss.zzzc.qihoo.net:9000/home/hdp-btime/btime_rec_user_log/hdfs/web/20160623/2016-06-23-18-42-04
+
 
