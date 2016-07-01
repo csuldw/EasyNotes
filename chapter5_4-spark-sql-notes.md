@@ -171,10 +171,40 @@ u2  s2   1      1
 加入我现在的数据以json格式存储在data.file中，现在先加载数据：
 
 ```
+import org.apache.spark.SparkContext
+
+import org.apache.spark.SparkConf
+import org.apache.spark.SparkContext._
+import org.apache.spark.rdd.RDD
+import org.apache.commons.configuration.{ PropertiesConfiguration => HierConf }
+import org.apache.spark.sql.types._
+
+import org.apache.spark.sql._
+import org.apache.spark.sql.functions._
+
 val spSQL = new org.apache.spark.sql.SQLContext(sc)
+import spSQL.implicits._
+
+val userDataDF = spSQL.jsonFile(inputFile)
 ```
 
+然后使用`groupBy`和`count`进行聚合:
 
+```
+userDataDF.groupBy("uid", "obj", "action").count
+```
+
+此时得到的结果是：
+
+```
+uid obj action count
+u1  s1  click   1
+u1  s1  view    2
+u1  s2  view    1
+u2  s1  view    1
+u2  s2  click   1
+u2  s2  view    1
+```
 
 
 
