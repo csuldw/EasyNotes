@@ -9,7 +9,7 @@
    * [Crontab详解](chapter1_5-crontab.md)
 * [Python](python.md)
    * [环境搭建](chapter2_1-environment.md)
-   * [字符串](chapter2_1-python-notes.md)
+   * [字符串](chapter2_2-python-notes.md)
    * [常用函数](chapter2_3-python_trick.md)
    * [参数传递](chapter2_3-paramter-passing.md)
    * [FAQ](chapter2_n-faq.md)
