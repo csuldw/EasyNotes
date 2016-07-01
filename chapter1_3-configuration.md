@@ -12,14 +12,6 @@ set nu
 set cursorline
 ```
 
-### crontab 设置
-
-执行`crontab -e`,设置程序自动执行
-
-```
-3,18,33,48 * * * * source ~/.bashrc && cd /home/liudiwei/project/ && sh run.sh>> log/run.out 2>&1; cd -
-```
-
 ## 环境搭建
 
 1. WinPython: https://sourceforge.net/projects/winpython/files/WinPython_2.7/
