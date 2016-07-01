@@ -22,8 +22,8 @@ Process 2：将所有对象合并为一个对象；
 在linux中执行 `spark-shell --driver-memory 10G --executor-memory 10G --executor-cores 5 --num-executors 3`启动spark-shell编程，接着输入下列代码：
 
 ```
-val initRDD : RDD[Array[String]] = sc.makeRDD(Array(Array("1","2"), Array("3","4")), 3)
-val rdd2 = initRDD.flatMap(x => x.toList)
+val initRDD : org.apache.spark.rdd.RDD[Array[String]] = sc.makeRDD(Array(Array("1","2"), Array("3","4")), 3)
+val rdd2 : org.apache.spark.rdd.RDD[String] = initRDD.flatMap(x => x.toList)
 rdd2.collect
 ```
 
