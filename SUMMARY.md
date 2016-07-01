@@ -18,7 +18,7 @@
    * [HDFS文件操作](chapter3_2-hadoop-file-system.md)
 * [Scala](chapter4-scala.md)
    * [Scala笔记](chapter41_-scala-note.md)
-   * [Redis操作](chapter5_2-redis.md)
+   * [Redis操作](chapter4_2-scala-redis.md)
 * [Spark](chapter5-spark.md)
    * [RDD操作详解-Action和Transformation](chapter5_1-spark-RDD-introduction.md)
    * [Spark算子-combineByKey](chapter5_2-spark-combineByKey.md)
