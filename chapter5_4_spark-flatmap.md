@@ -5,7 +5,7 @@ spark 1.6.1 api 给出的是如下说明：
 
 ```
 def flatMap[U](f: (T) ⇒ TraversableOnce[U])(implicit arg0: ClassTag[U]): RDD[U]
-//Return a new RDD by first applying a function to all elements of this RDD, and then flattening the results.
+Return a new RDD by first applying a function to all elements of this RDD, and then flattening the results.
 ```
 
 ## 理解
