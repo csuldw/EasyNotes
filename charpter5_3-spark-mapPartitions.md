@@ -1,6 +1,6 @@
 # Spark算子-mapPartitions
 
-mapPartitions和map很像，但map的对象是每个element，而mapPartitions是每个partition；  
+mapPartitions和map很像，但map的对象是每个element，而mapPartitions是每个partition，需要注意的是mapPartitions里面的每个part都是一个iterator迭代器；  
 
 ## Iterator误解
 
