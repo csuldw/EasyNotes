@@ -24,3 +24,18 @@ object RedisTest {
     redisClient.close()
   }
 ```
+
+
+
+
+### redis set 
+
+String redis.clients.jedis.Jedis.set(String key, String value, String nxxx, String expx, long time)
+```
+key 
+value 
+nxxx NX|XX, NX -- Only set the key if it does not already exist. XX 
+-- Only set the key if it already exist.
+expx EX|PX, expire time units: EX = seconds; PX = milliseconds
+time expire time in the units of {@param #expx}
+```
