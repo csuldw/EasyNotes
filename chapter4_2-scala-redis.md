@@ -51,5 +51,4 @@ val redisCli = new Jedis("localhost", 9890)
 redisCli.auth("xiaoxiao")
 println(redisCli.get("xiaoxiaoli"))  //返回null
 redisCli.set("xiaoxiaoli", "3", "NX", "EX", 13) // 等价于 redisCli.set("xiaoxiaoli", "3"); redisCli.expire("xiaoxiaoli", 13)
-
 ```
