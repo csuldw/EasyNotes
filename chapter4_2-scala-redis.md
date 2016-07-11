@@ -33,9 +33,9 @@ object RedisTest {
 首先看下redis.clients.jedis.Jedis的set方法
 
 
-> String redis.clients.jedis.Jedis.set(String key, String value, String nxxx, String expx, long time)
-
 ```
+String redis.clients.jedis.Jedis.set(String key, String value, String nxxx, String expx, long time)
+
 key 
 value 
 nxxx NX|XX, NX -- Only set the key if it does not already exist. XX 
@@ -43,6 +43,8 @@ nxxx NX|XX, NX -- Only set the key if it does not already exist. XX
 expx EX|PX, expire time units: EX = seconds; PX = milliseconds
 time expire time in the units of {@param #expx}
 ```
+
+下面举一个实例，来调用redis的set方法：
 
 ```
 val redisCli = new Jedis("localhost", 9890)
