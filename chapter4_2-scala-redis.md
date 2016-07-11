@@ -30,9 +30,11 @@ object RedisTest {
 
 ### redis 设置过期时间
 
-首先看下redis.clients.jedis.Jedis
+首先看下redis.clients.jedis.Jedis的set方法
 
-String redis.clients.jedis.Jedis.set(String key, String value, String nxxx, String expx, long time)
+
+> String redis.clients.jedis.Jedis.set(String key, String value, String nxxx, String expx, long time)
+> 
 ```
 key 
 value 
