@@ -34,7 +34,7 @@ object RedisTest {
 
 
 > String redis.clients.jedis.Jedis.set(String key, String value, String nxxx, String expx, long time)
-> 
+
 ```
 key 
 value 
