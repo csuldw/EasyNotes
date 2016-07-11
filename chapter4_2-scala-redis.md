@@ -1,4 +1,4 @@
-## Redis is作
+## Redis 操作
 
 ## sbt中添加 Redis
 
