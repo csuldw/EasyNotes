@@ -28,7 +28,9 @@ object RedisTest {
 
 
 
-### redis set 
+### redis 设置过期时间
+
+首先看下redis.clients.jedis.Jedis
 
 String redis.clients.jedis.Jedis.set(String key, String value, String nxxx, String expx, long time)
 ```
@@ -40,16 +42,10 @@ expx EX|PX, expire time units: EX = seconds; PX = milliseconds
 time expire time in the units of {@param #expx}
 ```
 
-
-##设置过期时间
-
 ```
 val redisCli = new Jedis("localhost", 9890)
 redisCli.auth("xiaoxiao")
-redisCli.select(1)
-val date1 = TimeUtils.getTime
-println(redisCli.get("xiaoxiaoli"))
-println("redis result is: " + (redisCli.get("xiaoxiaoli") == "1"))
+println(redisCli.get("xiaoxiaoli"))  //返回null
 //redisCli.set("xiaoxiaoli", "3", "XX", "EX", 13)
 redisCli.set("xiaoxiaoli", "1")
 redisCli.expire("xiaoxiaoli", 11)
