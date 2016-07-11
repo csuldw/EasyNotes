@@ -50,7 +50,6 @@ time expire time in the units of {@param #expx}
 val redisCli = new Jedis("localhost", 9890)
 redisCli.auth("xiaoxiao")
 println(redisCli.get("xiaoxiaoli"))  //返回null
-//redisCli.set("xiaoxiaoli", "3", "XX", "EX", 13)
-redisCli.set("xiaoxiaoli", "1")
-redisCli.expire("xiaoxiaoli", 11)
+redisCli.set("xiaoxiaoli", "3", "XX", "EX", 13) // 等价于 redisCli.set("xiaoxiaoli", "3"); redisCli.expire("xiaoxiaoli", 13)
+
 ```
