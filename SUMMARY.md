@@ -25,7 +25,7 @@
     * [Spark算子-mapPartitions](charpter5_3-spark-mapPartitions.md)
     * [Spark算子-flatMap](chapter5_4_spark-flatmap.md)
     * [Spark读取Redis数据](chapter5_3-redis-exp.md)
-    * [SparkSQL更改表结构](sparksql更改表结构.md)
     * [SparkSQL入门](chapter5_4-spark-sql-notes.md)
+    * [SparkSQL更改表结构](sparksql更改表结构.md)
     * [FAQ](chapter5_n-spark-test.md)
 
