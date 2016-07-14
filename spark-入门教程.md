@@ -29,7 +29,7 @@
 
 **注意**：默认情况下，如果没有`./src/main/scala`目录，那么使用sbt编译时，会找不到源文件，从而导致编译失败。
 
-使用sbt编译时，只用到`build.sbt`、`src/main/scala/testDemo.scala`、`dep/*`几个文件，`target`目录和`project`是执行`sbt compile`时生成的。
+使用sbt编译时，只用到`build.sbt`、`src/main/scala/testDemo.scala`、`dep/*`几个文件，`target`和`project` 目录是执行`sbt compile`时生成的。
 
 * build.sbt：用于`compile`时配置项目相关参数。
 * 
