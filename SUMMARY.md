@@ -20,6 +20,7 @@
     * [Scala笔记](chapter4_1-scala-note.md)
     * [Redis操作](chapter4_2-scala-redis.md)
 * [Spark](chapter5-spark.md)
+    * [Spark 入门教程](spark-入门教程.md)
     * [RDD操作详解-Action和Transformation](chapter5_1-spark-RDD-introduction.md)
     * [Spark算子-combineByKey](chapter5_2-spark-combineByKey.md)
     * [Spark算子-mapPartitions](charpter5_3-spark-mapPartitions.md)
