@@ -1,6 +1,7 @@
 ## Shell常用命令
 
 ### awk按指定字符切割
+
 ```
 cat 20160524_v1_0.log | awk -F 'uid\":\"' '{print $2}'  | awk -F '\"' '{print $1}' > uid_v1.data
 ```
@@ -12,6 +13,7 @@ cat text.file | sort -u > text.out
 ```
 
 ### 对文件按指定条件过滤
+
 ```
 cat uid_v1.uniq | awk '{if(length($0)==32) print $0 }' | grep -v "=" > uid_v1.uniq2
 ```
@@ -40,15 +42,13 @@ fi
 
 ```
 if [ ! -f "$savefile" ];then
-   
+
 ```
 
 ### 变量值减一
 
-```
-hour=3
-hour2=`expr $hour - 1`
-```
+    hour=3
+    hour2=`expr $hour - 1`
 
 ### zip解压
 
@@ -64,13 +64,10 @@ ls -l $localFilePath | awk '{ print $5 }'
 
 ### 获取hadoop中的某个文件大小
 
-```
-return_str="`hadoop fs -dus $uploadFilePath`"
-hdpsize=`echo $return_str | cut -d \  -f 2`
-```
+    return_str="`hadoop fs -dus $uploadFilePath`"
+    hdpsize=`echo $return_str | cut -d \  -f 2`
 
 ### 大小比较
-
 
 ```
 -eq             //等于
@@ -80,3 +77,12 @@ hdpsize=`echo $return_str | cut -d \  -f 2`
 -ge            //大于等于
 -le            //小于等于
 ```
+
+
+
+### 分组求和
+
+
+
+> awk '{a\[$1\]+=$2;b\[$1\]+=$3}END{for\(i in a\)print i,a\[i\],b\[i\]}' msg.3
+
