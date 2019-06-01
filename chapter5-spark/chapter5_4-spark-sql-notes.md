@@ -1,4 +1,4 @@
-# SparkSQL入门
+# SparkSQL简易入门
 
 > 官方文档连接：[http:\/\/spark.apache.org\/docs\/latest\/sql-programming-guide.html](http://spark.apache.org/docs/latest/sql-programming-guide.html)
 
@@ -31,7 +31,7 @@ DataFrame的数据特点是其包含了每个Record的Metadata信息，让你可
 
 ### 一、引入需要的库
 
-```
+```text
 import org.apache.spark.SparkContext
 
 import org.apache.spark.SparkConf
@@ -46,7 +46,7 @@ import org.apache.spark.sql.functions._
 
 ### 二、初始化SparkSQL
 
-```
+```text
 val sc: SparkContext // An existing SparkContext.
 val spSQL = new org.apache.spark.sql.SQLContext(sc)
 
@@ -56,7 +56,7 @@ import spSQL.implicits._
 
 ### 三、读取HDFS文件
 
-```
+```text
 inputFile="hdfs://master:9000/home/liudiwei/log.data"
 val df = spSQL.jsonFile(inputFile)    // Create the DataFrame
 ```
@@ -67,7 +67,7 @@ val df = spSQL.jsonFile(inputFile)    // Create the DataFrame
 
 下面引用api里面的实例
 
-```
+```text
 df.show()
 // age  name
 // null Michael
@@ -107,7 +107,7 @@ df.groupBy("age").count().show()
 // 30   1
 ```
 
-> 其中，select、groupBy +　count 是平时用到比较多的，尤其是groupBy结合count来统计数据，比较方便。show主要用于spark-shell里进行调试输出。
+> 其中，select、groupBy + count 是平时用到比较多的，尤其是groupBy结合count来统计数据，比较方便。show主要用于spark-shell里进行调试输出。
 
 ## 使用SQL语言操作数据
 
@@ -115,7 +115,7 @@ df.groupBy("age").count().show()
 
 方法一：spark SQL代码
 
-```
+```text
 //get user MD5 list
 df.registerTempTable("basisData")
 def getUser(spSQL: SQLContext) : RDD[String] = {
@@ -125,7 +125,7 @@ def getUser(spSQL: SQLContext) : RDD[String] = {
 
 方法二、内嵌函数select
 
-```
+```text
 df.select("uid").map(x => x.toString)
 ```
 
@@ -133,7 +133,7 @@ df.select("uid").map(x => x.toString)
 
 加入原始数据是下面这种，uid表示用户，obj表示某个对象，action表示对这个对象的操作\(只有click和view两类\)。
 
-```
+```text
 uid obj action
 u1  s1  view
 u1  s1  view
@@ -141,12 +141,12 @@ u1  s1  click
 u2  s1  view
 u1  s2  view
 u2  s2  view
-u2  s2  click 
+u2  s2  click
 ```
 
 现在我的目的是统计每个用户对各个对象的click和view的总数各是多少，需要得到结果如下：
 
-```
+```text
 uid obj click view
 u1  s1   1      2
 u1  s2   0      1
@@ -158,7 +158,7 @@ u2  s2   1      1
 
 加入我现在的数据以json格式存储在data.file中，现在先加载数据：
 
-```
+```text
 import org.apache.spark.SparkContext
 
 import org.apache.spark.SparkConf
@@ -178,13 +178,13 @@ val userDataDF = spSQL.jsonFile(inputFile)
 
 然后使用`groupBy`和`count`进行聚合:
 
-```
+```text
 userDataDF.groupBy("uid", "obj", "action").count
 ```
 
 此时得到的结果是：
 
-```
+```text
 uid obj action count
 u1  s1  click   1
 u1  s1  view    2
@@ -196,7 +196,7 @@ u2  s2  view    1
 
 下面编写一个通用函数
 
-```
+```text
 /* 功能:获取用户行为数据
  * dagaDF: 基础数据过滤后的数据
  * regName：设置sparkSQL的registerTempTable名字 
@@ -216,7 +216,7 @@ def getCmbActionList(spSQL: SQLContext, dataDF : DataFrame, regName : String, se
 
 调用该函数之后，便可得到需要的结果
 
-```
+```text
 val actionRes = getCmbActionList(spSQL, userDataDF, "userDataDFs", "uid,obj")
 ```
 

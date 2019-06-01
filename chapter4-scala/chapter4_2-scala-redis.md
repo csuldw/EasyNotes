@@ -1,8 +1,10 @@
+# Redis操作
+
 ## Redis 操作
 
 ## sbt中添加 Redis
 
-```
+```text
 libraryDependencies += "redis.clients" % "jedis" % "2.6.2"
 ```
 
@@ -10,7 +12,7 @@ libraryDependencies += "redis.clients" % "jedis" % "2.6.2"
 
 需要引入redis.clients.jedis.Jedis库。
 
-```
+```text
 import redis.clients.jedis.Jedis
 object RedisTest {
   def main(args: Array[String]) {
@@ -25,15 +27,11 @@ object RedisTest {
   }
 ```
 
-
-
-
 ### redis 设置过期时间
 
 首先看下redis.clients.jedis.Jedis的set方法
 
-
-```
+```text
 String redis.clients.jedis.Jedis.set(String key, String value, String nxxx, String expx, long time)
 
 key 
@@ -46,9 +44,10 @@ time expire time in the units of {@param #expx}
 
 下面举一个实例，来调用redis的set方法：
 
-```
+```text
 val redisCli = new Jedis("localhost", 9890)
 redisCli.auth("xiaoxiao")
 println(redisCli.get("xiaoxiaoli"))  //返回null
 redisCli.set("xiaoxiaoli", "3", "NX", "EX", 13) // 等价于 redisCli.set("xiaoxiaoli", "3"); redisCli.expire("xiaoxiaoli", 13)
 ```
+

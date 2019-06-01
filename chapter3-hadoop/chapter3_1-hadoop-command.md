@@ -1,4 +1,4 @@
-# Hadoop笔记
+# Hadoop常用命令
 
 ## hadoop常用命令
 
@@ -6,21 +6,21 @@
 
 ### 启动Hadoop
 
-```
+```text
 首先进入HADOOP_HOME目录
 然后执行命令：sh bin/start-all.sh
 ```
 
 ### 关闭Hadoop
 
-```
+```text
 首先进入HADOOP_HOME目录
 然后执行命令：sh bin/stop-all.sh
 ```
 
 ### 常用命令
 
-```
+```text
 hadoop fs -ls [hadoop folder]  #查看指定目录下内容
 hadoop fs –cat [file PATH] #打开某个已存在文件
 hadoop fs -put [local file PATH] [hadoop folder PATH] #将本地文件传至hadoop指定路径中
@@ -41,10 +41,11 @@ hadoop fs -dus $uploadFilePath #查看目录下所有文件的总大小
 
 下面是写在shell中的判断hdfs中是否存在某个文件夹，如果不存在，则创建
 
-```
+```text
 uploadPath="hdfs://localhost:9000/home/liudiwei/log/day"
 hadoop fs -test -e $uploadPath
 if [ $? -eq 1 ] ; then    
   hadoop fs -mkdir $uploadPath
 fi
 ```
+
